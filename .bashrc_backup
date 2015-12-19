@@ -58,7 +58,7 @@ bashrcc ()
 {
  source ~/.bashrc
  ori_dir=$(pwd)
- \cp ~/.bashrc ~/config/.bashrc_backup
+ \cp ~/.bashrc ~/config/.bashrc.bak
  cd /home/$USER/config
  /home/$USER/config/push.sh 
  cd $ori_dir
@@ -72,7 +72,7 @@ bashproc ()
 {
  source ~/.bash_profile
  ori_dir=$(pwd)
- \cp ~/.bash_profile ~/config/.bash_profile_backup
+ \cp ~/.bash_profile ~/config/.bash_profile.bak
  cd /home/$USER/config
  /home/$USER/config/push.sh
  cd $ori_dir
@@ -87,7 +87,7 @@ alias vimrce='vim ~/.vimrc'
 vimrcc ()
 {
  ori_dir=$(pwd)
- \cp ~/.vimrc ~/config/.vimrc_backup
+ \cp ~/.vimrc ~/config/.vimrc.bak
  cd /home/$USER/config
  /home/$USER/config/push.sh
  cd $ori_dir
@@ -103,7 +103,7 @@ alias crone='vim ~/.crontab'
 cronc ()
 {
  ori_dir=$(pwd)
- \cp ~/.crontab ~/config/.crontab_backup
+ \cp ~/.crontab ~/config/.crontab.bak
  cd /home/$USER/config
  /home/bohemine/config/push.sh
  cd $ori_dir
@@ -121,7 +121,7 @@ alias tmuxe='vim ~/.tmux.conf'
 tmuxc ()
 {
  ori_dir=$(pwd)
- \cp ~/.tmux.conf ~/config/.tmux.conf_backup
+ \cp ~/.tmux.conf ~/config/.tmux.conf.bak
  cd /home/$USER/config
  /home/$USER/config/push.sh
  cd $ori_dir
