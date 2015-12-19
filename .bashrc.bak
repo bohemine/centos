@@ -77,8 +77,8 @@ bashproc ()
  source ~/.bash_profile
  ori_dir=$(pwd)
  \cp ~/.bash_profile ~/config/.bash_profile.bak
- cd /home/$USER/config
- /home/$USER/config/push.sh
+ cd ~/config
+ ~/config/push.sh
  cd $ori_dir
 }
 
@@ -92,8 +92,8 @@ vimrcc ()
 {
  ori_dir=$(pwd)
  \cp ~/.vimrc ~/config/.vimrc.bak
- cd /home/$USER/config
- /home/$USER/config/push.sh
+ cd ~/config
+ ~/config/push.sh
  cd $ori_dir
 }
 
@@ -108,12 +108,31 @@ cronc ()
 {
  ori_dir=$(pwd)
  \cp ~/.crontab ~/config/.crontab.bak
- cd /home/$USER/config
- /home/bohemine/config/push.sh
+ cd ~/config
+ ~/config/push.sh
  cd $ori_dir
+
  crontab ~/.crontab
+
 }
 
+
+
+#---------+
+#  zshrc  |
+#---------+
+
+alias zshrce='vim ~/.zshrc'
+
+zshrcc ()
+{
+ source ~/.zshrc
+ ori_dir=$(pwd)
+ \cp ~/.zshrc ~/config/.zshrc.bak
+ cd ~/config
+ ~/config/push.sh
+ cd $ori_dir
+}
 
 
 
@@ -126,8 +145,8 @@ tmuxc ()
 {
  ori_dir=$(pwd)
  \cp ~/.tmux.conf ~/config/.tmux.conf.bak
- cd /home/$USER/config
- /home/$USER/config/push.sh
+ cd ~/config
+ ~/config/push.sh
  cd $ori_dir
 }
 
