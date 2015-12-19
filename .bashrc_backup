@@ -1,0 +1,142 @@
+# .bashrc
+# Source global definitions-+
+if [ -f /etc/bashrc ]; then 
+	. /etc/bashrc
+fi
+#----------------------------
+
+
+#--------------+
+#  OS setting  |
+#--------------+
+
+#Locale
+LANG=ja_JP.UTF-8
+
+#Prompt
+PS1='[\u] \w \$ '
+
+#centos version
+alias version='cat /etc/redhat-release'
+
+
+
+
+#------------------------+
+#  Environment variable  |
+#------------------------+
+
+export NVM_DIR="/home/$USER/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+
+
+#------------------+
+#  File operation  |
+#------------------+
+
+alias la='ls -a'
+alias ll='ls -l'
+alias lla='ls -l -a'
+alias rm='ls -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias lsc='ls -AlFh --show-control-chars --color=auto'
+alias df='df -h'
+
+
+#Jobs
+alias jobs='jobs -l'
+
+#---------+
+#  Shell  |
+#---------+
+#bashrc
+alias bashrce='vim ~/.bashrc'
+
+bashrcc ()
+{
+ source ~/.bashrc
+ ori_dir=$(pwd)
+ \cp ~/.bashrc ~/config/.bashrc_backup
+ cd /home/$USER/config
+ /home/$USER/config/push.sh 
+ cd $ori_dir
+}
+
+
+#bash_profile
+alias bashproe='vim ~/.bash_profile'
+
+bashproc ()
+{
+ source ~/.bash_profile
+ ori_dir=$(pwd)
+ \cp ~/.bash_profile ~/config/.bash_profile_backup
+ cd /home/$USER/config
+ /home/$USER/config/push.sh
+ cd $ori_dir
+}
+
+
+#-------+
+#  Vim  |
+#-------+
+alias vimrce='vim ~/.vimrc'
+
+vimrcc ()
+{
+ ori_dir=$(pwd)
+ \cp ~/.vimrc ~/config/.vimrc_backup
+ cd /home/$USER/config
+ /home/$USER/config/push.sh
+ cd $ori_dir
+}
+
+
+#----------+
+#   Cron   |
+#----------+
+
+alias crone='vim ~/.crontab'
+
+cronc ()
+{
+ ori_dir=$(pwd)
+ \cp ~/.crontab ~/config/.crontab_backup
+ cd /home/$USER/config
+ /home/bohemine/config/push.sh
+ cd $ori_dir
+ crontab ~/.crontab
+}
+
+
+
+
+#----------+
+#   Tmux   |
+#----------+
+alias tmuxe='vim ~/.tmux.conf'
+
+tmuxc ()
+{
+ ori_dir=$(pwd)
+ \cp ~/.tmux.conf ~/config/.tmux.conf_backup
+ cd /home/$USER/config
+ /home/$USER/config/push.sh
+ cd $ori_dir
+}
+
+
+#run tmux
+if [ -z $TMUX ]; then
+  if $(tmux has-session); then
+    tmux attach
+  else
+    tmux
+  fi
+fi
+
+
+
+
