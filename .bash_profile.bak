@@ -13,6 +13,7 @@ PATH=$PATH:/home/vagrant/.nvm/versions/node/v5.2.0/bin/node
 export PATH
 export NODE_PATH=/home/vagrant/.nvm/versions/node/v5.2.0/lib/node_modules
 
-
+#run zsh
+zsh
 
 
