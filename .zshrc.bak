@@ -50,7 +50,7 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias lsc='ls -AlFh --show-control-chars --color=auto'
 alias df='df -h'
-
+alias free='free -m'
 
 #Jobs
 alias jobs='jobs -l'
