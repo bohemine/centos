@@ -145,6 +145,35 @@ tmuxc ()
 }
 
 
+#--------+
+#  bash  |
+#--------+
 
+#bashrc
+alias bashrce='vim ~/.bashrc'
+
+bashrcc ()
+{
+ source ~/.bashrc
+ ori_dir=$(pwd)
+ \cp ~/.bashrc ~/config/.bashrc.bak
+ cd ~/config
+ ~/config/push.sh 
+ cd $ori_dir
+}
+
+
+#bash_profile
+alias bashproe='vim ~/.bash_profile'
+
+bashproc ()
+{
+ source ~/.bash_profile
+ ori_dir=$(pwd)
+ \cp ~/.bash_profile ~/config/.bash_profile.bak
+ cd ~/config
+ ~/config/push.sh
+ cd $ori_dir
+}
 
 
