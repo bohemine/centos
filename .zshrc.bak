@@ -36,7 +36,11 @@ case ${UID} in
     ;;
 esac
 
+
+#Change directory
 setopt auto_cd
+setopt auto_pushd
+
 
 #------------------+
 #  File operation  |
