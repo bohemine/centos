@@ -1,9 +1,10 @@
 
 
 
-#--------------+
-#  OS setting  |
-#--------------+
+
+#------+
+#  OS  |
+#------+
 
 #centos version
 alias version='cat /etc/redhat-release'
@@ -15,6 +16,15 @@ export LANG=ja_JP.UTF-8
 #----- -+
 #  zsh  |
 #-------+
+
+#Complement
+autoload -U compinit
+compinit
+
+autoload predict-on
+predict-on
+
+
 
 #Command-history
 HISTFILE=~/.zsh_history
@@ -40,6 +50,10 @@ esac
 #Change directory
 setopt auto_cd
 setopt auto_pushd
+setopt correct
+setopt list_packed
+setopt nolistbeep
+
 
 
 #------------------+
@@ -79,14 +93,56 @@ zshrcc ()
 
 
 
+#-------+
+#  Vim  |
+#-------+
+
+vimrce='vim ~/.vimrc'
+
+vimrcc ()
+{
+ ori_dir=$(pwd)
+ \cp ~/.vimrc ~/config/.vimrc.bak
+ cd ~/config
+ ~/config/push.sh
+ cd $ori_dir
+}
+
+
+#----------+
+#   Cron   |
+#----------+
+
+
+alias crone='vim ~/.crontab'
+
+cronc ()
+{
+ ori_dir=$(pwd)
+ \cp ~/.crontab ~/config/.crontab.ba
+ cd ~/config
+ ~/config/push.sh
+ cd $ori_dir
+ crontab ~/.crontab
+}
 
 
 
 
+#----------+
+#   Tmux   |
+#----------+
 
+alias tmuxe='vim ~/.tmux.conf'
 
-
-
+tmuxc ()
+{
+ ori_dir=$(pwd)
+ \cp ~/.tmux.conf ~/config/.tmux.conf.bak
+ cd ~/config
+ ~/config/push.sh
+ cd $ori_dir
+}
 
 
 
