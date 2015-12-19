@@ -51,6 +51,9 @@ alias jobs='jobs -l'
 #---------+
 #  Shell  |
 #---------+
+#key-bind
+set -o vi
+
 #bashrc
 alias bashrce='vim ~/.bashrc'
 
