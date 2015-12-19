@@ -63,8 +63,8 @@ bashrcc ()
  source ~/.bashrc
  ori_dir=$(pwd)
  \cp ~/.bashrc ~/config/.bashrc.bak
- cd /home/$USER/config
- /home/$USER/config/push.sh 
+ cd ~/config
+ ~/config/push.sh 
  cd $ori_dir
 }
 
