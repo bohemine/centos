@@ -27,16 +27,10 @@ predict-on
 
 
 #Color
-
-
 export LSCOLORS='exfxcxdxbxegedabagacad'
 alias ls="ls -G"
 
-
-
 zstyle ':completion:*' list-colors ''
-
-
 
 
 
@@ -61,7 +55,7 @@ case ${UID} in
 esac
 
 
-#Change directory
+#Option
 setopt auto_cd
 setopt auto_pushd
 setopt correct
@@ -70,22 +64,28 @@ setopt nolistbeep
 
 
 
-#------------------+
-#  File operation  |
-#------------------+
+#---------+
+#  Alias  |
+#---------+
 
-alias la='ls -aG'
+#File operation
 alias ll='ls -lG'
-alias lla='ls -laG '
+alias la='ls -laG '
 alias rm='ls -i'
 alias cp='cp -i'
 alias mv='mv -i'
 alias lsc='ls -AlFh --show-control-chars --color=auto'
+
+#Size
 alias df='df -h'
+alias du='du -h'
 alias free='free -m'
 
+#Command
+alias where='command -v'
+
 #Jobs
-alias jobs='jobs -l'
+alias j='jobs -l'
 
 
 
