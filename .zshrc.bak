@@ -34,6 +34,11 @@ alias ls="ls -G"
 
 
 
+zstyle ':completion:*' list-colors ''
+
+
+
+
 
 #Command-history
 HISTFILE=~/.zsh_history
