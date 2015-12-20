@@ -1,13 +1,8 @@
 
-
-
-
 #------+
 #  OS  |
 #------+
 
-#centos version
-alias version='cat /etc/redhat-release'
 
 #Locale
 export LANG=ja_JP.UTF-8
@@ -27,9 +22,6 @@ predict-on
 
 
 #Color
-export LSCOLORS='exfxcxdxbxegedabagacad'
-alias ls="ls -G"
-
 zstyle ':completion:*' list-colors ''
 
 
@@ -86,6 +78,9 @@ alias where='command -v'
 
 #Jobs
 alias j='jobs -l'
+
+#centos version
+alias version='cat /etc/redhat-release'
 
 #Option
 setopt complete_aliases # aliased ls needs if file/dir completions work
