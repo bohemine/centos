@@ -26,6 +26,15 @@ predict-on
 
 
 
+#Color
+
+
+export LSCOLORS='exfxcxdxbxegedabagacad'
+alias ls="ls -G"
+
+
+
+
 #Command-history
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
