@@ -69,9 +69,9 @@ setopt nolistbeep
 #  File operation  |
 #------------------+
 
-alias la='ls -a'
-alias ll='ls -l'
-alias lla='ls -l -a'
+alias la='ls -aG'
+alias ll='ls -lG'
+alias lla='ls -laG '
 alias rm='ls -i'
 alias cp='cp -i'
 alias mv='mv -i'
