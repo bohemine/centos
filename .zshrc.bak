@@ -39,10 +39,12 @@ bindkey -v
 #Prompt
 case ${UID} in
 0)
-    PROMPT="%F{red}[%n] %c %#%f "
+    PROMPT="%F{red}[%n] %c %#%f 
+"
     ;;
 *)
-    PROMPT="%F{cyan}[%n] %c %#%f "
+    PROMPT="%F{cyan}[%n] %c %#%f 
+"
     ;;
 esac
 
