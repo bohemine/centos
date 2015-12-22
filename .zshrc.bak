@@ -134,7 +134,7 @@ zshenvc ()
 {
  source ~/.zshenv
  ori_dir=$(pwd)
- \cp ~/.zshrc ~/config/.zshenv.bak
+ \cp ~/.zshenv ~/config/.zshenv.bak
  cd ~/config
  ~/config/push.sh
  cd $ori_dir
