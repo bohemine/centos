@@ -121,6 +121,32 @@ zshrcc ()
 
 
 
+#----------+
+#  zshenv  |
+#----------+
+
+alias zshenv='vim ~/.zshenv'
+
+zshenvc ()
+{
+ source ~/.zshenv
+ ori_dir=$(pwd)
+ \cp ~/.zshrc ~/config/.zshenv.bak
+ cd ~/config
+ ~/config/push.sh
+ cd $ori_dir
+}
+
+
+
+
+
+
+
+
+
+
+
 #-------+
 #  Vim  |
 #-------+
