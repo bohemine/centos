@@ -8,12 +8,9 @@ fi
 # User specific environment and startup programs
 
 PATH=$PATH:$HOME/.local/bin:$HOME/bin
-PATH=$PATH:/home/vagrant/.nvm/versions/node/v5.2.0/bin/node
+PATH=$PATH:~/.nvm/versions/node/v5.2.0/bin/node
 
 export PATH
-export NODE_PATH=/home/vagrant/.nvm/versions/node/v5.2.0/lib/node_modules
-
-#run zsh
-zsh
+export NODE_PATH=~/.nvm/versions/node/v5.2.0/lib/node_modules
 
 
