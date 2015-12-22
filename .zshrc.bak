@@ -79,6 +79,7 @@ alias free='free -m'
 alias where='command -v'
 
 #Jobs
+alias ps='ps xf'
 alias j='jobs -l'
 
 #centos version
