@@ -1,0 +1,233 @@
+
+#------+
+#  OS  |
+#------+
+
+
+#Locale
+export LANG=ja_JP.UTF-8
+
+
+
+
+#------------------------+
+#  Environment variable  |
+#------------------------+
+export NVM_DIR="~/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+
+
+
+
+#----- -+
+#  zsh  |
+#-------+
+
+#Complement
+autoload -U compinit
+compinit
+
+autoload predict-on
+predict-on
+
+
+
+#Color
+zstyle ':completion:*' list-colors ''
+
+
+
+#Command-history
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt hist_ignore_dups     # ignore duplication command history list
+setopt share_history        # share command history data
+
+#Key-bind
+bindkey -v
+
+#Prompt
+case ${UID} in
+0)
+    PROMPT="%F{red}[%n] %c %#%f 
+"
+    ;;
+*)
+    PROMPT="%F{cyan}[%n] %c %#%f 
+"
+    ;;
+esac
+
+
+#Option
+setopt auto_cd
+setopt auto_pushd
+setopt correct
+setopt list_packed
+setopt nolistbeep
+
+
+
+#---------+
+#  Alias  |
+#---------+
+
+#File operation
+alias ll='ls -lGF'
+alias la='ls -laGF'
+alias rm='ls -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias lsc='ls -AlFh --show-control-chars --color=auto'
+
+#Size
+alias df='df -h'
+alias du='du -h'
+alias free='free -m'
+
+#Command
+alias where='command -v'
+
+#Jobs
+alias ps='ps xf'
+alias j='jobs -l'
+
+#centos version
+alias version='cat /etc/redhat-release'
+
+#Option
+setopt complete_aliases # aliased ls needs if file/dir completions work
+
+
+
+
+#---------+
+#  zshrc  |
+#---------+
+
+alias zshrce='vim ~/.zshrc'
+
+zshrcc ()
+{
+ source ~/.zshrc
+ ori_dir=$(pwd)
+ \cp ~/.zshrc ~/config/.zshrc.bak
+ cd ~/config
+ ~/config/push.sh
+ cd $ori_dir
+}
+
+
+
+#----------+
+#  zshenv  |
+#----------+
+
+alias zshenv='vim ~/.zshenv'
+
+zshenvc ()
+{
+ source ~/.zshenv
+ ori_dir=$(pwd)
+ \cp ~/.zshrc ~/config/.zshenv.bak
+ cd ~/config
+ ~/config/push.sh
+ cd $ori_dir
+}
+
+
+
+
+
+
+
+
+
+
+
+#-------+
+#  Vim  |
+#-------+
+
+vimrce='vim ~/.vimrc'
+
+vimrcc ()
+{
+ ori_dir=$(pwd)
+ \cp ~/.vimrc ~/config/.vimrc.bak
+ cd ~/config
+ ~/config/push.sh
+ cd $ori_dir
+}
+
+
+#----------+
+#   Cron   |
+#----------+
+
+
+alias crone='vim ~/.crontab'
+
+cronc ()
+{
+ ori_dir=$(pwd)
+ \cp ~/.crontab ~/config/.crontab.ba
+ cd ~/config
+ ~/config/push.sh
+ cd $ori_dir
+ crontab ~/.crontab
+}
+
+
+
+
+#----------+
+#   Tmux   |
+#----------+
+
+alias tmuxe='vim ~/.tmux.conf'
+
+tmuxc ()
+{
+ ori_dir=$(pwd)
+ \cp ~/.tmux.conf ~/config/.tmux.conf.bak
+ cd ~/config
+ ~/config/push.sh
+ cd $ori_dir
+}
+
+
+#--------+
+#  bash  |
+#--------+
+
+#bashrc
+alias bashrce='vim ~/.bashrc'
+
+bashrcc ()
+{
+ source ~/.bashrc
+ ori_dir=$(pwd)
+ \cp ~/.bashrc ~/config/.bashrc.bak
+ cd ~/config
+ ~/config/push.sh 
+ cd $ori_dir
+}
+
+
+#bash_profile
+alias bashproe='vim ~/.bash_profile'
+
+bashproc ()
+{
+ source ~/.bash_profile
+ ori_dir=$(pwd)
+ \cp ~/.bash_profile ~/config/.bash_profile.bak
+ cd ~/config
+ ~/config/push.sh
+ cd $ori_dir
+}
+
+
