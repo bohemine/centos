@@ -128,7 +128,7 @@ zshrcc ()
 #  zshenv  |
 #----------+
 
-alias zshenv='vim ~/.zshenv'
+alias zshenve='vim ~/.zshenv'
 
 zshenvc ()
 {
