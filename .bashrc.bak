@@ -45,6 +45,8 @@ alias lsc='ls -AlFh --show-control-chars --color=auto'
 alias df='df -h'
 alias free='free -m'
 
+#Command
+alias where='command -v'
 
 #Jobs
 alias jobs='jobs -l'
@@ -160,6 +162,6 @@ if [ -z $TMUX ]; then
   fi
 fi
 
-
-
+#run zsh
+zsh
 
