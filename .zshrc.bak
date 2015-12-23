@@ -49,7 +49,7 @@ setopt hist_ignore_dups     # ignore duplication command history list
 setopt share_history        # share command history data
 
 #Key-bind
-bindkey -v
+bindkey -e
 
 #Prompt
 case ${UID} in
