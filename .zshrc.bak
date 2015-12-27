@@ -85,6 +85,8 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias lsc='ls -AlFh --show-control-chars --color=auto'
 
+alias dropbox='~/tools/dropbox/Dropbox-Uploader/dropbox_uploader.sh '
+
 #Size
 alias df='df -h'
 alias du='du -h'
