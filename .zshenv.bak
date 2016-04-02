@@ -10,7 +10,7 @@ PATH=$PATH:~/.nvm/versions/node/v5.3.0/bin/npm
 export PATH
 
 #node.js
-export NODE_PATH=~/.nvm/versions/node/v5.3.0/lib/node_modules
+#export NODE_PATH=~/.nvm/versions/node/v5.3.0/lib/node_modules
 
 #rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
