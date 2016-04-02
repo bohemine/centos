@@ -46,6 +46,12 @@ nmap <F5> <ESC>i<C-R>=strftime("%Y/%m/%d (%a) %H:%M")<CR><CR>
 "  Visual  |
 "----------+
 
+"インデント
+set tabstop=4
+set autoindent
+set expandtab
+set shiftwidth=4
+
 
 " カレント行ハイライトON
 set cursorline
