@@ -78,8 +78,8 @@ setopt nolistbeep
 #---------+
 
 #File operation
-alias ll='ls -lFh'
-alias la='ls -laFh'
+alias ll='ls -lFh --group-directories-first'
+alias la='ls -laFh --group-directories-first'
 alias rm='ls -i'
 alias cp='cp -i'
 alias mv='mv -i'
