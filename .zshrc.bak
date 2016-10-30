@@ -228,3 +228,17 @@ bashproc ()
 }
 
 
+#-----------+
+#  ansible  |
+#-----------+
+
+rolesc ()
+{
+ ori_dir=$(pwd)
+ cd ~/repos/ansible_roles
+ git add -A
+ git commit -m "auto commit"
+ git push -u origin master
+ cd $ori_dir
+}
+
