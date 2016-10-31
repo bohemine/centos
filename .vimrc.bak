@@ -36,7 +36,7 @@ nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
 
 "<C-p><C-n>でコマンド履歴のフィルタリングをオン
-cnoremap <C-o> <Up>
+cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 
 
@@ -68,8 +68,11 @@ set hlsearch
 "行番号表示
 set number
 
-
-"
+"行番号の色
+hi LineNr ctermbg=0 ctermfg=0
+hi CursorLineNr ctermbg=4 ctermfg=0
+set cursorline
+hi clear CursorLine
 
 
 
