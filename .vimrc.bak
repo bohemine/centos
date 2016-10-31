@@ -57,8 +57,9 @@ set shiftwidth=4
 
 
 " カレント行ハイライトON
+"機能しないので保留
 set cursorline
-highlight CursorLine cterm=underline ctermfg=Blue ctermbg=Black
+highlight CursorLine term=underline ctermfg=Blue ctermbg=Black
 
 "行番号表示
 set number
