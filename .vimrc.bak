@@ -88,13 +88,15 @@ call dein#add('Shougo/dein.vim')
 
 "plugins---
 call dein#add('mattn/emmet-vim')
-
+call dein#add('tpope/vim-surround')
+call dein#add('hail2u/vim-css3-syntax')
+call dein#add('taichouchou2/vim-javascript')
 
 "/plugins---
+
 call dein#end()
 filetype plugin indent on
 syntax enable
-
 "/dein script----------------------------------------------- 
 
 
