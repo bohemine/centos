@@ -70,7 +70,7 @@ set number
 
 "行番号の色
 hi LineNr ctermbg=0 ctermfg=0
-hi CursorLineNr ctermbg=4 ctermfg=0
+hi CursorLineNr ctermbg=4 ctermfg=12
 set cursorline
 hi clear CursorLine
 
