@@ -1,5 +1,4 @@
 
-
 "--------+
 "  File  |
 "--------+
@@ -58,8 +57,8 @@ set shiftwidth=4
 
 " カレント行ハイライトON
 "機能しないので保留
-set cursorline
-highlight CursorLine term=underline ctermfg=Blue ctermbg=Black
+"set cursorline
+"highlight CursorLine cterm=underline ctermfg=Blue ctermbg=Black
 
 "行番号表示
 set number
@@ -72,6 +71,34 @@ hi clear CursorLine
 
 
 
+
+
+"--------+
+"  dein  |
+"--------+
+
+"dein script--------------------------------------------------
+if &compatible
+  set nocompatible
+endif
+set runtimepath+=~/.dein/dein/repos/github.com/Shougo/dein.vim
+
+call dein#begin(expand('~/.vim/dein'))
+call dein#add('Shougo/dein.vim')
+
+"plugins---
+call dein#add('mattn/emmet-vim')
+
+
+
+
+"/plugins---
+
+call dein#end()
+filetype plugin indent on
+syntax enable
+
+"/dein script----------------------------------------------- 
 
 
 
