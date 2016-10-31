@@ -60,7 +60,7 @@ set shiftwidth=4
 set cursorline
 
 " アンダーラインを引く(gui)
-highlight CursorLine gui=underline guifg=NONE guibg=NONE
+"highlight CursorLine gui=underline guifg=NONE guibg=NONE
 
 "検索文字列をハイライトする。(_vimrcではなく_gvimrcで設定する必要がある)
 set hlsearch
