@@ -10,6 +10,7 @@ set encoding=utf-8
 "スワップファイル
 set noswapfile
 
+set history=200
 
 "--------+
 "  Edit  |
@@ -35,7 +36,7 @@ nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
 
 "<C-p><C-n>でコマンド履歴のフィルタリングをオン
-cnoremap <C-p> <Up>
+cnoremap <C-o> <Up>
 cnoremap <C-n> <Down>
 
 
