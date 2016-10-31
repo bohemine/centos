@@ -69,7 +69,7 @@ set hlsearch
 set number
 
 "行番号の色
-hi LineNr ctermbg=0 ctermfg=6
+hi LineNr ctermbg=0 ctermfg=30
 hi CursorLineNr ctermbg=4 ctermfg=0
 set cursorline
 hi clear CursorLine
