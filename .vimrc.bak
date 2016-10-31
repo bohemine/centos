@@ -90,15 +90,13 @@ call dein#add('Shougo/dein.vim')
 call dein#add('mattn/emmet-vim')
 
 
-
-
 "/plugins---
-
 call dein#end()
 filetype plugin indent on
 syntax enable
 
 "/dein script----------------------------------------------- 
+
 
 
 
